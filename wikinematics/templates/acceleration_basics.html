@@ -1,0 +1,95 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Acceleration: an Introduction</h1>
+<p style="text-align:center;font-size:0.9em"><i>Never enough, always faster!</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formulas">Formulas</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'speed_basics'%}">Speed and Velocity: Basics</a></p>
+<hr>
+<br>
+<br>
+<br>
+<p>Until here, we only saw cases where the velocity was constant. Basically, it means that we only had to care about displacement and time, since velocity didn't change. However, in many everyday situations, an object's velocity isn't fixed. Cars accelerate, airplanes take off, and life isn't fixed at a constant speed, right ?</p>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="smaller_illustration" src="https://assets10.lottiefiles.com/packages/lf20_BiAtYn.json"  background="transparent"  speed="0.7"  style="width: 40%; height: 40%;"  loop  autoplay></lottie-player>
+<p>So,</p>
+<br>
+<h3>What is acceleration and how do we define it in kinematics ?</h3>
+<br>
+<p>Well, the definition of acceleration is quite intuitive: it is <strong>the rate of change of the velocity of an object with respect to time.</strong>.</p>
+<p>Two words are important here: <strong><i>rate of change</i></strong>, and <strong><i>with respect to time</i></strong></p>
+<br>
+<p>Indeed, a very simple explanation is that if an object's acceleration is <strong>4 m/s<sup>2</sup></strong> (we will talk about units <a href="#units">later</a>), it means that <strong>every second</strong> its velocity will <strong>increase by 4 m/s</strong>. Similarly, if its acceleration (rather deceleration) is <strong>-4 m/s<sup>2</sup></strong>, it means that every second its velocity will <strong>decrease by 4 m/s</strong></p>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets7.lottiefiles.com/packages/lf20_o7wiho0a.json"  background="transparent"  speed="1"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+<p class="small" style="text-align:center">(graph shows an acceleration of 0.5 m/s<sup>2</sup>)</p>
+<br>
+<br>
+<h5>Units:</h5>
+<p>As you may have seen, acceleration is defined in <strong>meters per second squared (m/s<sup>2</sup>)</strong>. This unit may not seem as intuitive as previous ones (meters, seconds, meters per second, etc..), but in reality, it is purely logical. </p>
+<br>
+<img class="smaller_illustration" src="{% static 'a_unit.png' %}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseaccelu" aria-expanded="false" aria-controls="collapseExample">
+    Here's why
+  </button>
+</p>
+<div class="collapse" id="collapseaccelu">
+  <div class="card card-body">
+    <p>Recall that acceleration is the <strong>rate of change of velocity</strong> with respect to <strong>time:</strong></p>
+    <br>
+    <p>As said before, if an object's acceleration is 4 m/s<sup>2</sup>, it means that it will gain 4 m/s every second.</p>
+    <p>Therefore, it will gain 8 m/s after 2 seconds, 12 m/s after 3 seconds, etc.. right ? </p>
+    <br>
+    <p>This means that acceleration multiplied by time has to give back a unit of velocity (m/s), and thus "something" multiplied by seconds has to give back meters per seconds:</p>
+    <img class="bigger_illustration" src="{%static 'mult_a_and_t.png'%}" alt="[image not found]">
+    <p>Which is why acceleration is in "meters per seconds squared" !</p>
+    <p>This all comes back into one sentence: <i>"Acceleration multiplied by time represents an increase (or decrease if acceleration is negative) in velocity"</i></p>
+  </div>
+</div>
+<br>
+<br>
+<h4>Finding acceleration when velocity changes:</h4>
+<p>It thus seems logical that if we know how much velocity has changed in how much time, we can easily find an object's acceleration, right ?</p>
+<p>Well, we will need these two informations: <strong>"the change in velocity"</strong> and <strong>"time elapsed"</strong></p>
+<br>
+<p>In physics, we like to call "changes" using the Delta letter: <img style="width:1.3%;height:1.2%" src="{%static 'delta.png'%}" alt="[image not found]"></p>
+<ul>
+  <li>the change in speed will thus be called <img style="width:3%;height:3%" src="{%static 'delta_v.png'%}" alt="[image not found]"></li>
+  <li>and time elapsed will be called <img style="width:0.8%;height:0.8%" src="{%static 't.png'%}" alt="[image not found]"> (which should be <img style="width:2%;height:2%" src="{%static 'delta_t.png'%}" alt="[image not found]"> to be rigorous)</li>
+</ul>
+<h6>And the formula for acceleration is thus:</h6>
+<br>
+<img class="smaller_illustration" src="{% static 'a_delta_v_t.png' %}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseaccelf" aria-expanded="false" aria-controls="collapseExample">
+    Here's why
+  </button>
+</p>
+<div class="collapse" id="collapseaccelf">
+  <div class="card card-body">
+    <p>First recall that </p>
+    <img class="smaller_illustration" src="{%static 'delta_v_vf_v0.png'%}" alt="[image not found]">
+    <p>since "the change in velocity" is the "final velocity" minus the "initial velocity", right ?</p>
+    <br>
+    <br>
+    <p>Also recall that acceleration is "the rate at which velocity changes" "with respect to time". </p>
+    <p>Therefore, if an object gained 14 m/s in 2 seconds, it means that it gained 7 m/s in 1 second, which means that by definition, its acceleration will be 7 m/s<sup>2</sup></p>
+    <p>So the following formula should seem intuitive:</p>
+    <img class="smaller_illustration" src="{% static 'a_illustrated.png' %}" alt="[image not found]">
+  </div>
+</div>
+<br>
+<br>
+<p><strong>Bottom note: we always treat acceleration as something constant here. This means that while velocity will change (that's the definition of acceleration), the acceleration itself, or the rate at which velocity changes won't change. In simple words, if acceleration is 4 m/s<sup>2</sup>, it will always remain 4 m/s<sup>2</sup></strong></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+
+{%endblock%}

@@ -1,0 +1,114 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Uniformly Accelerated Circular Motion (UACM)</h1>
+<p style="text-align:center;font-size:0.9em"><i>The best way to get a headache</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formulas">Formulas</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'speed_basics'%}">Speed: basics</a>; <a href="{%url 'speed_cm'%}">Speed: Uniform Circular Motion</a>; <a href="{%url 'acceleration_basics'%}">Acceleration: an Introduction</a>; <a href="{%url 'acceleration_rm'%}">UARM</a></p>
+<hr>
+<br>
+<br>
+<p>We strongly suggest you to review the prerequisites for this section.</p>
+<br>
+<h3>What is Uniformly Accelerated Circular Motion (UACM)?</h3>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="smaller_illustration" src="https://assets5.lottiefiles.com/packages/lf20_9uhjaxos.json"  background="transparent"  speed="1"  style="width: 30%; height: 30%;"  loop  autoplay></lottie-player>
+<br>
+<p>As usual, everything is in the name. There are two important things, here:</p>
+<br>
+<ul>
+  <li>"<strong>Circular</strong>" tells us that we will be looking at angles, radians, angular velocities, etc... (recall <a href="{%url 'speed_cm'%}">Speed: Uniform Circular Motion</a>)</li>
+  <li>"<strong>Uniformly Accelerated</strong>" tells us that there will be some sort of acceleration, and angular velocity won't remain constant today!</li>
+</ul>
+<p>For a more formal definition, UACM is <i>a movement of a body follwing a circular path, where the rate of rotation changes linearly over time.</i></p>
+<br>
+<br>
+<a name="above"></a>
+<h4>Angular Acceleration:</h4>
+<p>Remember how we defined angular velocity in <a href="{%url 'speed_cm'%}">Speed: Uniform Circular Motion</a> ? Well, for UACM, we will have to similarly define an <strong>angular acceleration</strong>.</p>
+<br>
+<img class="bigger_illustration" src="{%static 'a_alpha.png'%}" alt="">
+<br>
+<p>Just like linear acceleration refers to the rate of change of velocity over time, angular acceleration refers to <strong>the rate of change of angular velocity over time</strong></p>
+<p>Put simply, it answers the question <i>"how much more radians per second do we have, per second ?"</i></p>
+<p>Once we know <a href="{%url 'acceleration_basics'%}"> what acceleration is</a>, we can easily understand angular acceleration:</p>
+<br>
+<img class="bigger_illustration" src="{%static 'angular_acceleration.png'%}" alt="">
+<br>
+<br>
+<h4>The formula to find angular acceleration:</h4>
+<br>
+<p>Let:</p>
+<ul>
+  <li><p> <img style="width:4%;height:4%;" src="{%static 'deltaomega.png'%}" alt=""> be the change in angular velocity</p></li>
+  <li><p> <img style="width:3%;height:3%;" src="{%static 'delta_t.png'%}" alt=""> be the change in time </p></li>
+</ul>
+<br>
+<p>Well, similarly to <a href="{%url 'acceleration_basics'%}">linear acceleration</a>, angular acceleration is defined by:</p>
+<img class="smaller_illustration" src="{%static 'alpha_deltaomega_deltat.png'%}" alt="">
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="{%static 'VXA6dI0bTv.json'%}"  background="transparent"  speed="0.7"  style="width: 30%; height: 30%;"  loop  autoplay></lottie-player>
+<br>
+<h3>UACM formulas:</h3>
+<br>
+<h5>The circular Big-5:</h5>
+<p>Similarly to <a href="{%url 'acceleration_cm'%}">UARM</a>, we also have 5 major variables for UACM. The rule is the same: <strong>when you know three of them, you can find the other two</strong>.</p>
+<br>
+<ul>
+  <li>The angle <img style="width:1.8%;height:1.8%" src="{%static 'theta.png'%}" alt=""> represents displacement in UACM (like in <a href="{%url 'speed_cm'%}">UCM</a>)</li>
+  <li>The angular acceleration <img style="width:2%;height:2%" src="{%static 'alpha.png'%}" alt="">, as we've discussed <a href="#above">above</a></li>
+  <li>The final angular velocity (after acceleration) is noted <img style="width:4%;height:4%" src="{%static 'wf.png'%}" alt=""></li>
+  <li>The initial angular velocity (before acceleration) is noted <img style="width:4%;height:4%" src="{%static 'w0.png'%}" alt=""></li>
+  <li>And as always, time elapsed is noted <img style="width:1.5%;height:1.5%" src="{%static 't.png'%}" alt=""> (more rigorously <img style="width:3%;height:3%" src="{%static 'delta_t.png'%}" alt=""> )</li>
+</ul>
+<br>
+<h5>Formulas</h5>
+<br>
+<img class="illustration" src="{%static 'wf_alphat_w0.png'%}" alt="">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsewf" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsewf">
+  <div class="card card-body">
+    <p>I strongly recommend you to look at <a href="{%url 'speed_basics'%}">Speed: basics</a> to understand how linear velocity is calculated when there is acceleration</p>
+    <p>You'll notice that </p>
+    <img class="illustration" src="{%static 'wf_alphat_w0.png'%}" alt="">
+    <p>looks extremely similar to </p>
+    <img class="illustration" src="{%static 'vat.png'%}" alt="">
+    <br>
+    <p>Once again, UACM looks very much like UARM, just with angular acceleration and angular velocity instead of linear ones !</p>
+    <p>For more detailed explanation, you can directly go check <a href="{%url 'speed_basics'%}">Speed: basics</a> (we assume it is a prerequisite for this page)</p>
+  </div>
+</div>
+<img class="illustration" src="{%static 'theta_formula.png'%}" alt="">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsetheta" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsetheta">
+  <div class="card card-body">
+    <p>For this one, I strongly recommend you to look at <a href="{%url 'acceleration_rm'%}">Acceleration: UARM</a> to understand how "linear" position is calculated when there is acceleration</p>
+    <p>You'll notice that </p>
+    <img class="illustration" src="{%static 'theta_formula.png'%}" alt="">
+    <p>looks extremely similar to </p>
+    <img class="illustration" src="{%static 'displacement_acceleration.png'%}" alt="">
+    <br>
+    <p>Once again, UACM looks very much like UARM, just with angular acceleration, angular velocity and angles instead of linear ones !</p>
+    <p>For more detailed explanation, you can directly go check <a href="{%url 'acceleration_rm'%}">Acceleration: UARM</a> (we assume it is a prerequisite for this page)</p>
+  </div>
+</div>
+<br>
+<br>
+<h4>A quick comparison that can help you understand and remember:</h4>
+<br>
+<img class="bigger_illustration" src="{%static 'uarm_uacm.png'%}" alt="">
+<br>
+<br>
+<br>
+{%endblock%}

@@ -1,0 +1,114 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Speed/Velocity: Basics</h1>
+<p style="text-align:center;font-size:0.9em"><i>Is there even a difference between speed and velocity?</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formulas">Formulas</a></p>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<h3>Speed vs Velocity</h3>
+<br>
+<h5>Speed:</h5>
+<p>It might sound quite intuitive to you, but speed measures "how fast an object is moving". Nothing crazy to see here... <br>But something you have to remember is that <strong>speed doesn't care about the direction of movement</strong>. It is a <strong>scalar (and not vectorial) quantity</strong>.</p>
+<p class="small">(recall <a href="{%url 'intro'%}">scalars vs vectors</a>)</p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets3.lottiefiles.com/private_files/lf30_0oldmhje.json"  background="transparent"  speed="1.5"  style="width: 50%; height: 50%;"  loop  autoplay></lottie-player>
+<br>
+<h5>Velocity</h5>
+<p>On the other hand, velocity is a <a href="{%url 'intro'%}">vectorial</a> quantity, which means that it <strong>does care about the direction</strong> of the movemement (since vectors have a direction)</p>
+<br>
+<br>
+<img class="bigger_illustration" style="width:60%;height:60%;" src="https://sites.google.com/site/emmalouisenason/_/rsrc/1492509203619/speed-vs-velocity/9725360.png" alt="[image not found]">
+<p>As a result, two cars moving opposite directions at same speed don't have the same velocity !</p>
+<br>
+<h3>Be careful about units!</h3>
+<p>In Physics, some units are used and some are not. That's the rules.</p>
+<p class="small">(read more about <a href="https://en.wikipedia.org/wiki/International_System_of_Units">International System of Units</a>)</p>
+<br>
+<img class="illustration" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/38/SI_base_units.svg/1200px-SI_base_units.svg.png" alt="">
+<br>
+<p>Therefore, for speed/velocity, <strong>always remember to convert the following units:</strong> </p>
+<ul>
+  <li>Distance is measured in <strong>meters</strong> (no kilometers, no miles, no centimeters, etc..)</li>
+  <li>Time is measured in <strong>seconds</strong> (no minutes, no hours, etc...)</li>
+  <li>Therefore, speed/velocity is measured in <strong>meters per second</strong> (no miles per hour, not kilometers per hour etc...)</li>
+</ul>
+<p>If some data is given to you in other units, you should always remember to <strong>first convert them into meters/seconds</strong> before touching anything!</p>
+<p class="small">(a useful converter <a href="https://www.unitconverters.net/">here</a>)</p>
+<br>
+<br>
+<a name="formulas"></a>
+<h3>Different ways to express velocity:</h3>
+<p>Okay, now we are ready to tackle bigger problems!</p>
+<p>Here, we will introduce two ways/formulas for calculating velocity, using different known datas:</p>
+<br>
+<h6>Using distance and time </h6>
+<p>In the most simple case, where an object is moving at constant velocity:</p>
+<p>Remember that velocity is expressed as <strong>meters per second</strong>, in other words, as <strong>distance over time</strong>.</p>
+<p>Therefore, if you know that an object has travelled d meters in t seconds, you can very easily find its velocity s using the following formula:</p>
+<br>
+<img class="smaller_illustration" src="{%static 'vdt.png'%}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsespeed" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsespeed">
+  <div class="card card-body">
+    <p>From this formula you can easily guess that:</p>
+    <img class="smaller_illustration" src="{%static 'derivations_speed_distance_time.png'%}" alt="[image not found]">
+    <p>which means that speed, time and distance all depend on each other!</p>
+  </div>
+</div>
+<br>
+<p>However, this method only works if there is the object's velocity is <strong>constant</strong> (=no acceleration). If it's not the case, the velocity of the object will continuously change and the above formula won't work :/</p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets9.lottiefiles.com/packages/lf20_cd8oznzu.json"  background="transparent"  speed="2"  style="width: 70%; height: 70%;"  loop  autoplay></lottie-player>
+<br>
+<h6>Using acceleration and time</h6>
+<p>If there is acceleration, then another way of calculating an object's velocity can be used.</p>
+<p>The formula is given by:</p>
+<br>
+<img class="illustration" src="{% static 'vat.png' %}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseaccel" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapseaccel">
+  <div class="card card-body">
+    <h6>Let's try to understand this formula:</h6>
+    <p>Its first chunk is given by</p>
+    <img class="smaller_illustration" style="width:20%;height:20%;" src="{%static 'at.png'%}" alt="[image not found]">
+    <p>Recall the units of the following terms:</p>
+    <img class="illustration" src="{%static 'a_and_t.png'%}" alt="[image not found]">
+    <p>Which seems logical, since acceleration means "how much more velocity per second?"</p>
+    <br>
+    <p>Therefore, if we multiply them:</p>
+    <img class="illustration" src="{%static 'mult_a_and_t.png'%}" alt="[image not found]">
+    <p>Which gives us the same units as velocity! Therefore:</p>
+    <p><i>"Acceleration times an amount of time actually represents an increase in velocity"</i></p>
+    <br>
+    <img class="illustration" src="{% static 'vat.png' %}" alt="[image not found]">
+    <p>The formula can thus be translated as such:</p>
+    <p><i>The final velocity is the increase in velocity during time period t, added to the initial speed.</i></p>
+  </div>
+</div>
+<br>
+<p>Here, a represents acceleration, t represents time, and v<sub>0</sub> represents the initial velocity ("before time started")</p>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets4.lottiefiles.com/packages/lf20_o7wiho0a.json"  background="transparent"  speed="2"  style="width: 60%; height: 60%;"  loop  autoplay></lottie-player>
+<p style="text-align:center;font-size:0.8em;"><i>Velocity over time, when acceleration is constant</i></p>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

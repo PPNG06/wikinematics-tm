@@ -1,0 +1,80 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Mechanical Energy</h1>
+<p style="text-align:center;font-size:0.9em"><i>I will never change.</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formula">Formula</a> / <a href="#kinepot">Kinetic-Potential conversion</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'energy_basics'%}">Energy: Basics</a>; <a href="{%url 'energy_kinetic'%}">Kinetic Energy</a>; <a href="{%url 'energy_potential'%}">Potential Energy</a></p>
+<hr>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<h3>Mechanical energy</h3>
+<p>This leads us to the last energy: mechanical energy. Be careful, however, because mechanical energy isn't actually a proper type of energy. We define mechanical energy as "<strong>either the energy of an object in motion OR the energy that is stored in objects by their position</strong>". <br>Yes, this is exactly the definition of both kinetic and potential energy.</p>
+<p>This means that <strong>mechanical energy is just the sum of both kinetic and potential energy</strong></p>
+<img src="https://engineerfix.com/wp-content/uploads/2021/04/Mechanical-Energy.png" class="bigger_illustration" alt="">
+<br>
+<p>But remember what we said in <a href="{%url 'energy_basics'%}">Energy: Basics</a>, that energy is conserved through the motion? Well, to be more precise, maybe I should've said that <strong>mechanical energy is conserved through the motion.</strong></p>
+<p>This means that while kinetic and potential energy will often vary, with one being converted to the other and vice-versa, the sum of both, aka mechanical energy, won't change. In other words, the object's speed and position will vary depending on the motion, but no energy will be added from the outside.</p>
+<br>
+<a name="formula"></a>
+<h4>The "formula"</h4>
+<p>Well, it's in the definition, but here is how you find an object's mechanical energy:</p>
+<br>
+<img class="bigger_illustration" src="{%static 'emec_ekin_epot.png'%}" alt="">
+<br>
+<p>This, however, isn't the intersting part.</p>
+<p>Things get serious when we start talking about <strong>conservation of mechanical energy</strong></p>
+<br>
+<a name="kinepot"></a>
+<h3>Conservation of mechanical energy</h3>
+<br>
+<p>I feel like I never say it enough, but <strong>mechanical energy is conserved through the motion</strong> when there is no exterior force.</p>
+<p>This case includes systems such as objects rolling down a slope, skateparks, projectiles and many other systems where nothing from the exterior interferes with the movement.</p>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="smaller_illustration" src="https://assets8.lottiefiles.com/packages/lf20_z5nwxcpq.json"  background="transparent"  speed="1"  style="width: 40%; height: 40%;"  loop  autoplay></lottie-player>
+<br>
+<p>But while an object's mechanical energy doesn't change, its speed or height might still change, right ? <br>And as we saw in <a href="{%url 'energy_kinetic'%}">Kinetic Energy</a> and <a href="{%url 'energy_potential'%}">Potential Energy</a>, changes in <strong>speed</strong> will affect <strong>kinetic energy</strong>, while changes in <strong>height</strong> will affect <strong>potential energy</strong>.</p>
+<br>
+<p>And this is the interesting part: we know that the "big picture" (aka mechanical energy) stays constant, even though the smaller ones vary.</p>
+<p>This means that if we know an object's mechanical energy at some point in the motion, the latter will never change ! Let's see how we can apply this:</p>
+<br>
+<h4>Application</h4>
+<br>
+<p>The most common case you''ll see in physics is the skateboard example. And this case actually really helps understanding how things work</p>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets1.lottiefiles.com/private_files/lf30_qk9ylrwx.json"  background="transparent"  speed="1"  style="width: 50%; height: 50%;"  loop  autoplay></lottie-player>
+<br>
+<p>While studying energy, you will always want to know the object's mechanical energy.</p>
+<p>To find it, there are two interesting points:</p>
+<ul>
+  <li>When the height of the object is 0 (bottom of the U for the skateboard case)</li>
+  <li>When the speed of the object is 0 (top of the U, before changing direction for the skateboard case)</li>
+</ul>
+<p>Why these points ? Because when height is 0, potential energy is 0 which means that <strong>kinetic energy = mechanical energy</strong> and when speed is 0, kinetic energy is 0, which means that <strong>potential energy = mechanical energy</strong></p>
+<br>
+<img class="bigger_illustration" style="width:100%;" src="https://energyfollower.com/wp-content/uploads/2022/03/car-mechanical-kinetic-energy-1024x459.png" alt="">
+<br>
+<p>Just like this, we found the object's mechanical energy. Then, at any point in the motion, knowing one of the two energies (kinetic/potential) will help us find the other using the <a href="#formula">above formula.</a></p>
+<br>
+<p>Lastly, knowing these two energies will help us find the <strong>speed/height</strong> of the object (assuming we know its mass), which is always helpful in kinematics ! ;)</p>
+<br>
+<h4>A very helpful simulation to understand:</h4>
+<p>(I recommend just testing the intro part or setting friction to "None", since we won't be talking about friction here.)</p>
+<p>(Also, activating the pie chart and bar graph will really help you understand how/when mechanical energy works)</p>
+<br>
+<iframe src="https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_en.html"
+        width="100%"
+        height="800"
+        allowfullscreen>
+</iframe>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

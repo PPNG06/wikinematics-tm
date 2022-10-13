@@ -1,0 +1,86 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Potential Energy</h1>
+<p style="text-align:center;font-size:0.9em"><i>HOOOOOOOLD ON !</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formula">Formula</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'energy_basics'%}">Energy: Basics</a></p>
+<hr>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<p>(This is a recap from <a href="{%url 'energy_basics'%}">Energy: basics</a>)</p>
+<br>
+<a name="def"></a>
+<h5>Potential energy</h5>
+<br>
+<p>Potential energy might seem a little more abstract than <a href="{%url 'energy_kinetic'%}">kinetic energy</a>. In fact, an object can store some energy <strong>depending on its position, and especially its height</strong>. For example, the metal ball of a demolition machine is storing energy when it is held at an elevated position (by the way, it is this energy that will be converted into kinetic energy when the metal ball is released and thus gains speed.)</p>
+<br>
+<p>Well, this "stored energy of position" is what we call potential energy.</p>
+<br>
+<img src="https://openclipart.org/image/2000px/281653" class="smaller_illustration" alt="">
+<br>
+<br>
+<h4>Potential energy: the formula</h4>
+<br>
+<p>By definition, potential energy has to depend on the object's <strong>height</strong> relative to a certain point. In fact, imagine a skateboarder at the top of a slope. If he rides down the slope, the speed he gains will depend on the height of the slope, right ? </p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets1.lottiefiles.com/private_files/lf30_qk9ylrwx.json"  background="transparent"  speed="1"  style="width: 60%; height: 60%;"  loop  autoplay></lottie-player>
+<br>
+<p> Well, this is because he holds more potential energy at the top, which will convert to more kinetic energy when he goes down (we talk about this process more in detail in <a href="{%url 'energy_mechanical'%}">Mechanical Energy <a>), but for the moment, just realize that <strong>potential energy depends on the object's height</strong>.</p>
+<br>
+<p>Another important factor, once again, is <strong>mass</strong>. In fact, you should be aware that holding 1kg or 100kg doesn't require the same energy (I mean, feel free to try) </p>
+<br>
+<br>
+<a name="formula"></a>
+<h5>The formula looks like this:</h5>
+<br>
+<img class="illustration" src="{%static 'epot.png'%}" alt="[image not found]">
+<p class="small" style="text-align:center">(m = mass, h=height)</p>
+<br>
+<h6>But wait, what is "g" ?</h6>
+<p>Well, g is something you will often encounter in physics, and is the <strong>gravity of Earth.</strong> By definition, it is a constant, and you can consider it to be equal to 9,8m/s<sup>2</sup>. As you can see, its unit is that of acceleration, and this is because it represents "the acceleration due to gravity of any object on Earth."</p>
+<p>If we stay on earth, then g will always remain constant, at 9,8m/s<sup>2</sup>. However, if we talk about other planets, know that <strong>each planet has its own gravity</strong></p>
+<p class="small">(Read more about g <a href="https://en.wikipedia.org/wiki/Gravity_of_Earth">here</a>)</p>
+<br>
+<br>
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsespeed" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsespeed">
+  <div class="card card-body">
+    <p>This formula looks pretty simple and should be pretty intuitive:</p>
+    <ul>
+      <li>It's just <strong>the product of all components</strong> influencing an object's potential energy</li>
+      <li>For a given object, the only way for its potential energy to <strong>increase/decrease</strong> is by <strong>increasing/decreasing its height</strong></li>
+      <li>There are three (changing) variables in the formula: potential energy, mass and height. This means that <strong>when you know two of them you can always find the third one</strong>! (assuming you know the planet you're on)</li>
+    </ul>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<h4>A very helpful simulation to understand:</h4>
+<p>(I recommend just testing the intro part or setting friction to "None", since we won't be talking about friction here.)</p>
+<p>(Also, activating the pie chart and bar graph will really help you understand how/when potential energy works)</p>
+<br>
+<iframe src="https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_en.html"
+        width="100%"
+        height="800"
+        allowfullscreen>
+</iframe>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

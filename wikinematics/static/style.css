@@ -1,0 +1,91 @@
+p{
+  margin:0;
+}
+.illustration{
+  width:40%;
+  height:40%;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.center{
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.smaller_illustration{
+  width:30%;
+  height:30%;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.bigger_illustration{
+  width:50%;
+  height:50%;
+  display: block;
+  margin-left:auto;
+  margin-right:auto;
+}
+.card{
+  background-color: white;
+  border-width:10px;
+  border-color:#7dffa0;
+}
+
+
+@media (min-width: 991.98px) {
+main {
+padding-left: 240px;
+}
+}
+
+/* Sidebar */
+.sidebar {
+position: fixed;
+top: 0;
+bottom: 0;
+left: 0;
+padding: 58px 0 0; /* Height of navbar */
+box-shadow: 0 2px 5px 0 rgb(0 0 0 / 5%), 0 2px 10px 0 rgb(0 0 0 / 5%);
+width: 240px;
+z-index: 600;
+}
+
+@media (max-width: 991.98px) {
+.sidebar {
+width: 100%;
+}
+}
+.sidebar .active {
+border-radius: 5px;
+box-shadow: 0 2px 5px 0 rgb(0 0 0 / 16%), 0 2px 10px 0 rgb(0 0 0 / 12%);
+}
+
+.sidebar-sticky {
+position: relative;
+top: 0;
+height: calc(100vh - 48px);
+padding-top: 0.5rem;
+overflow-x: hidden;
+overflow-y: auto; /* Scrollable contents if viewport is shorter than content. */
+}
+.easter_egg{
+  color:grey;
+}
+.card-hover{
+  width:90%;
+  height:80%;
+  transition: width 0.3s, height 0.3s;
+}
+.card-hover:hover{
+  width:100%;
+  height:90%;
+}
+.card-hover-2{
+  width:90%;
+  transition: width 0.3s;
+}
+.card-hover-2:hover{
+  width:100%;
+}

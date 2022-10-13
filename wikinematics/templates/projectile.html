@@ -1,0 +1,97 @@
+{%extends 'home.html'%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Kinematics in 2D and Projectiles</h1>
+<p style="text-align:center;font-size:0.9em"><i>Pew pew pew</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formula">Formula</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'speed_rm'%}">URM</a>; <a href="{%url 'acceleration_rm'%}">UARM</a>; <a href="{%url 'energy_mechanical'%}">Mechanical Energy</a></p>
+<hr>
+<br>
+<br>
+<br>
+<p>In this unit, we put everything we learnt so far into use, so make sure to grasp the prerequisites!</p>
+<br>
+<h3>What is 2D ? </h3>
+<p>Until here, we only studied one dimensional motions (<a href="{%url 'speed_rm'%}">URM</a> and <a href="{%url 'acceleration_rm'%}">UARM</a>) and circular motions (<a href="{%url 'speed_cm'%}">UCM</a> and <a href="{%url 'acceleration_cm'%}">UACM</a>)</p>
+<p>However, a lot of movements are neither one dimensional nor circular. This is the case of thrown balls, canons, and basically most projectiles!</p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets2.lottiefiles.com/packages/lf20_ykcFvT.json"  background="transparent"  speed="1"  style="width: 50%; height: 50%; margin-top:0%;"  loop  autoplay></lottie-player>
+<p>As you can see, projectiles move <strong>left and right</strong> (x-axis), but also <strong>up and down</strong> (y-axis)! So, how should we combine the two ?</p>
+<br>
+<a name="gravity"></a>
+<h4>Gravity on Earth:</h4>
+<p>An object thrown in the air like a projectile will draw a curve with the shape of a parabola.</p>
+<br>
+<img class="illustration" src="https://www.ux1.eiu.edu/~cfadd/1350/09Mom/Images/ball.gif" alt="">
+<p>This is mainly because of earth's <strong>gravity</strong>. You can think of it like this: gravity is the object's <strong>acceleration towards the ground. </strong></p>
+<p class="small">(For more formal definitons, check <a href="https://spaceplace.nasa.gov/what-is-gravity/en/">here</a>)</p>
+<p>Another important thing: <strong>there is nothing apart from gravity that acts on a projectile.</strong></p>
+<br>
+<h6>So, how should we tackle 2D motion ?</h6>
+<p>Well, this is the key: when you throw an object in the air, it <strong>only</strong> accelerates towards the ground. This is because gravity only acts <strong>vertically</strong> on the object, and won't slow down the object <strong>horizontally</strong>.</p>
+<p>It might sound surprising, but any object that you throw <strong>never loses "horizontal" speed</strong>. Put in another way, at no point will the object move "purely vertically"</p>
+<br>
+<img class="illustration" src="https://stickmanphysics.com/wp-content/uploads/2020/09/Angular-Projectile-Throw-Definitions.gif" alt="">
+<br>
+<p>To describe 2D motion, we will therefore <strong>separate the x and y axis.</strong> Because of what we said earlier, the y axis will be a <a href="{%url 'acceleration_rm'%}">UARM</a>, with acceleration being <strong>gravity</strong>, while the x axis will be a simple <a href="{%url 'speed_rm'%}">URM</a>, since there is no acceleration towards left or right.</p>
+<img class="illustration" src="https://stickmanphysics.com/wp-content/uploads/2020/09/2D-Projectile-Motion.gif" alt="">
+<br>
+<h5>Finding the inital velocities:</h5>
+<p>The key step in 2D motion will be to find the <strong>inital horizontal and vertical</strong> velocities. For this, we will have to use <a href="{%url 'intro'%}">trigonometry.</a> In fact, let's say that a projectile is thrown at 14,1 m/s, with an angle of 45°.</p>
+<br>
+<img class="illustration" src="{%static 'entirevec.png'%}" alt="">
+<br>
+<p>On the picture, you can clearly see that the x-component of the speed vector is 10 m/s, and the y-component is also 10 m/s. These are our <strong>initial velocities</strong>. But so, how do we go from 14.1 m/s with an angle of 45° to 10 m/s and 10 m/s ? </p>
+<br>
+<p>Well, by using <a href="{%url 'intro'%}">sine and cosine</a> ! On the picture, it is clear that sin(45)x14.1 = 10, which is the initial vertical velocity. Similarly, cos(45)x14.1 = 10, which is the initial horizontal velocity (sin gives vertical and cos gives horizontal here).</p>
+<br>
+<img class="illustration" src="{%static 'vec_val.png'%}" alt="">
+<br>
+<p>So, our <strong>initial velocities are found using some (quite trivial) trigonometry</strong>! What's next ?</p>
+<br>
+<br>
+<h5>Finding the equations:</h5>
+<br>
+<p>With the inital velocities found, it is now quite easy to find the equations of motion.</p>
+<p><a href="#gravity">Recall</a> that <strong>x-axis is a simple URM</strong>, and <strong>y-axis is a UARM</strong></p>
+<br>
+<a name="x"></a>
+<h6>X-axis:</h6>
+<p>Since x-axis is a <a href="{%url 'speed_rm'%}">URM</a>, it simply means that <strong>velocity remains constant over time</strong>! Therefore, to find the horizontal distance at of a projectile at time t, simply use:</p>
+<br>
+<img class="illustration" src="{%static 'vdt_dvt.png'%}" alt="">
+<p>with v being the <strong>initial horizontal velocity</strong>, as found before.</p>
+<br>
+<a name="y"></a>
+<h6>Y-axis:</h6>
+<p>Y-axis will be a UARM, and as you may have guessed, the <strong>acceleration will be the earth gravity</strong>, aka 9.8 m/s<sup>2</sup>!</p>
+<p>To find the height of a projectile at time t, simply use:</p>
+<br>
+<img src="{%static 'projectile_y.png'%}" class="illustration" alt="">
+<p>with <strong>a = -9.8 m/s<sup>2</sup></strong> (minus because acceleration is towards the ground and we consider the positive direction as going upwards), and <strong>v<sub>0y</sub> being the initial vertical velocity</strong>!</p>
+<br>
+<h5>Combining the two</h5>
+<br>
+<p>With this in mind, if you want to find the exact position of an projectile after 3 seconds (assuming it is thrown from 0,0), just use the <a href="#x">x-axis equation</a> to find the <strong>horizontal position</strong> and <a href="#y">y-axis equation</a> to find the <strong>vertical position</strong> by replacing t with 3, and you're set!</p>
+<br>
+<img class="illustration" src="https://stickmanphysics.com/wp-content/uploads/2020/09/2D-Projectile-Motion.gif" alt="">
+<br>
+<br>
+<h4>A great tool for visualisation:</h4>
+<iframe src="https://phet.colorado.edu/sims/html/projectile-motion/latest/projectile-motion_en.html"
+        width="100%"
+        height="800"
+        allowfullscreen>
+</iframe>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

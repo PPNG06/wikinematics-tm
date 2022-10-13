@@ -1,0 +1,194 @@
+{% extends "home.html"%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Kinematics: an Introduction</h1>
+<p style="text-align:center;font-size:0.9em"><i>Here, we introduce the building blocks of kinematics.</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definition</a> / <a href="#frame">Frames of Reference</a> / <a href="#angle">Angles and Trig</a> / <a href="#vector">Scalars and Vectors</a></p>
+<br>
+<hr>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<h3>What is kinematics ?</h3>
+<br>
+<h5>Definition:</h5>
+<p><strong>Kinematics</strong> is a branch of physics that describes the motion of points, objects and systems (group of objects), but without considering the causes of its motion! Basically, it means that we won't
+talk much about forces or anything such, but mainly about speed, velocities, energies and most importantly: <strong>motion</strong>.</p>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets2.lottiefiles.com/packages/lf20_7xqsdhxr.json"  background="transparent"  speed="1.5"  style="width: 60%; height: 60%;"  loop  autoplay></lottie-player>
+<br>
+<h5>But why should we study motion ?</h5>
+<p>Well, objects all around us are in motion! Everything from a simple tennis ball to the Hercules-Corona Borealis Great Wall (the largest known object in the Universe) involves motion one way or another.
+Interesting questions can thus arise: how long will it take for a space probe to travel to the Moon? What is the best way to shoot a football ?</p>
+<div class="row">
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets3.lottiefiles.com/packages/lf20_ONfhj8.json"  background="transparent"  speed="1.5"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+  </div>
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets4.lottiefiles.com/private_files/lf30_rn8hog3p.json"  background="transparent"  speed="1.5"  style="width: 100%; height: 100%;"  loop autoplay></lottie-player>
+  </div>
+</div>
+<br>
+<p><strong>Kinematics is the key.</strong> But in order to better understand kinematics, we will first need to get in touch with some basic concepts, the first one being: frames of reference! </p>
+<br>
+<br>
+<br>
+<a name="frame"></a>
+<h3>Frames of reference</h3>
+<p>It is impossible to describe an object's position or speed. Yes, you heard me right. It's impossible. In fact, right now, if you're seated in front of your computer, you might think that your
+speed is 0. But isn't the Earth actually spinning on itself ? So technically, you're spinning too... But isn't the Earth also rotating around the Sun ? So what's your actual speed ?</p>
+<br>
+<p>Well, maybe we should choose a point in space, and it would be smarter to give your position and speed <strong>relative to this point</strong>.</p>
+<p>For example, if this point is your computer, then maybe that your speed is really 0, but if this point is the Sun, then your speed will be infinitely greater!</p>
+<p>If you're in a car going at 20km/h, then your speed relative to the road is 20km/h,
+but your speed relative to the car you're in will always be 0km/h, since you and the car are going at the same speed.</p>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets5.lottiefiles.com/packages/lf20_yvrh9cry.json"  background="transparent"  speed="3"  style="width: 60%; height: 6%;"  loop autoplay></lottie-player>
+<br>
+<h5>Well, this is the definition of a frame of reference:</h5>
+<p>It is an "arbitrary set of axes with reference to which the position or motion of something is described or physical laws are formulated."</p>
+<p>Remember this: it is <strong>arbitrary</strong>. As long as you are consistent, any frame is technically equally valid (with some being more convenient than others). But you <strong>don’t want to change coordinate systems</strong> in the middle of a calculation.</p>
+<br>
+<img class="illustration" src="https://study.com/cimages/multimages/16/axisgraph3795074999033209767.png" alt="[image not found]">
+<h5>How to translate this into calculations ?</h5>
+<p>It's as simple as that: we set the (0,0) of our coordinate system being the point we chose, and the set of axis becomes our frame of reference!</p>
+<br>
+<br>
+<h5>A cool video to illustrate the subject:</h5>
+<p style="background-color: unset;"><iframe width="500" height="280" src="https://www.youtube-nocookie.com/embed/bJMYoj4hHqU" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen="allowfullscreen" id="qrcode0" style="overflow: auto;" class="youtubeIFrame"></iframe><a href="https://www.youtube.com/watch?v=bJMYoj4hHqU" class="youtubeImageContainer"><canvas class="thisqrcode" id="this_qrcode0" height="100%" width="100%" style="height: 30%; width: 30%;"></canvas></a>
+</p>
+<br>
+<br>
+<br>
+<a name="angle"></a>
+<h3>Angles/Trig functions</h3>
+
+<p>Okay, I guess you know more or less what an angle is, right? I won't have to give you its definition.</p>
+<p>Just a little picture to illustrate my point:</p>
+<br>
+<img class="smaller_illustration" src="https://www.skillsyouneed.com/images/geo/angle.png" alt="[no image found]">
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<h3>Degrees and Radians</h3>
+<p>There are two units for measuring an angle: degrees and radians.</p>
+<p><strong>Both of them represent exactly the same thing</strong>, the only difference being that:</p>
+<ul>
+  <li>In <strong>degrees</strong>, a circle is 360° (thus half-circle is 180°, right angle is 90°, etc..)</li>
+  <li>In <strong>radians</strong>, a circle is 2&#960; rad (thus half-circle is &#960; rad, right angle is <sup>&#960;</sup>&frasl;<sub>2</sub> rad, etc..)</li>
+</ul>
+<img class="bigger_illustration" style="width:70%;height:70%;" src="https://www.101computing.net/wp/wp-content/uploads/degrees-to-radians-conversions.png" alt="[image not found]">
+<br>
+<h5>Conversion</h5>
+<p>Conversion between the two units is thus as easy as that:</p>
+<ul>
+  <li>1° = <sup>&#960;</sup>&frasl;<sub>180</sub> rad</li>
+  <li>1 rad = 180/&#960;°</li>
+</ul>
+
+<br>
+<h3>Trigonometry:</h3>
+<p>In kinematics, we will very often encounter three functions: <strong>sine, cosine and tangent</strong>.</p>
+<p>Before we get started, know that we will only work in rectangle triangles for the following parts, and remember that what we say here <strong>only works in rectangle triangles</strong> (which is why we love them in physics).</p>
+<p class="small">In general, we use these three functions mostly in rectangle triangles, though ;)</p>
+<br>
+<h5>Sine</h5>
+<p>In a rectangle triangle, the sine function defines the ratio between two sides: <strong>the one opposite</strong> to the angle <strong>over the hypothenuse</strong>:</p>
+<img class="smaller_illustration" src="https://cdn.inchcalculator.com/wp-content/uploads/2020/12/sin.png" alt="[image not found]">
+<br>
+<h5>Cosine</h5>
+<p>The cosine function defines the ratio between <strong>the adjacent</strong> side to the angle <strong>over the hypothenuse</strong>:</p>
+<img class="smaller_illustration" src="https://cdn.inchcalculator.com/wp-content/uploads/2020/12/cos.png" alt="[image not found]">
+<br>
+<h5>Tangent</h5>
+<p>The tangent function defines the ratio between <strong>the opposite </strong>side to the angle <strong>over its opposite</strong>:</p>
+<img class="smaller_illustration" src="https://cdn.inchcalculator.com/wp-content/uploads/2020/12/tan.png" alt="">
+<br>
+<h5>Their reverses:</h5>
+<p>With that, we know that we can find the ratio between two sides of the rectangle triangle if we know an angle, but is the reverse true?</p>
+<br>
+<p>Can we find the angle if we know the two sides?</p>
+<br>
+<p><strong>Yes</strong>, and for that, we will use their reverse function!</p>
+<p>In fact, </p>
+<ul>
+  <li>sin(x) = <sup>a</sup>&frasl;<sub>c</sub> , but <strong>sin<sup>-1</sup>(<sup>a</sup>&frasl;<sub>c</sub>) = x</strong></li>
+  <li>cos(x) = <sup>b</sup>&frasl;<sub>c</sub> , but <strong>cos<sup>-1</sup>(<sup>b</sup>&frasl;<sub>c</sub>) = x</strong></li>
+  <li>tan(x) = <sup>a</sup>&frasl;<sub>b</sub> , but <strong>tan<sup>-1</sup>(<sup>a</sup>&frasl;<sub>b</sub>) = x</strong></li>
+</ul>
+<br>
+<br>
+<h5>Okay, but what does that mean?</h5>
+<p>Well, it teaches us two things:</p>
+<ul>
+  <li>It is easy to find the sides and angles of a rectangle triangle (which will be very helpful later on)</li>
+  <li>Together, the three trig functions sine, cosine and tangent help us to find "missing informations" about rectangle triangles</li>
+</ul>
+<br>
+<h5>A fun video to remember the formulas (strongly recommend watching):</h5>
+<p style="background-color: unset;"><iframe width="500" height="280" src="https://www.youtube-nocookie.com/embed/PIWJo5uK3Fo" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope" allowfullscreen="allowfullscreen" id="qrcode0" style="overflow: auto;" class="youtubeIFrame"></iframe><a href="https://youtu.be/PIWJo5uK3Fo" class="youtubeImageContainer"><canvas class="thisqrcode" id="this_qrcode0" height="100%" width="100%" style="height: 30%; width: 30%;"></canvas></a>
+</p>
+<br>
+<br>
+<br>
+<br>
+<a name="vector"></a>
+<h3>Scalars & Vectors</h3>
+<p>The last building blocks of kinematics are vectors. But what exactly is a vector?</p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets1.lottiefiles.com/packages/lf20_16neitlf.json"  background="transparent"  speed="2"  style="width: 30%; height: 30%;"  loop autoplay></lottie-player>
+<br>
+<p>Well, a <strong>vector</strong> is a very particular type of <strong>quantity</strong>.</p>
+<p>In fact, <strong>scalar</strong> quantities usually only possess one attribute: <strong>magnitude</strong> (ex: <strong>3</strong> meters, <strong>4</strong> kilograms, etc...)</p>
+<p>But <strong>vectors</strong> also possess another attribute:<strong> direction</strong> <span class="small">(and now maybe you start to understand why we talked about angles earlier...)</span></p>
+<br>
+<p>We thus define vectors as quantities that possess both <strong>magnitude and direction</strong>, whereas scalars only possess <strong>magnitude</strong>:</p>
+<br>
+<img class="bigger_illustration" src="https://cdn.savemyexams.co.uk/cdn-cgi/image/w=1920,f=auto/uploads/2020/05/Scalars-vectors-table.png" alt="[image not found]">
+<br>
+<h5>How to represent a vector?</h5>
+<p>Well, since it has a magnitude and a direction, the best way to represent a vector is just using an <strong>arrow</strong>!</p>
+<br>
+<img class="bigger_illustration" src="https://cdn1.byjus.com/wp-content/uploads/2019/03/magnitude-of-a-vector.png" alt="[image not found]">
+<br>
+<p>Then to name a vector, we just write its <strong>starting and ending points</strong>, and draw a little arrow above it. For example, the vector going from A to B is just: </p>
+<img class="illustration" src="https://mathemania.com//wp-content/uploads/2015/07/vector-ab.png" alt="[image not found]">
+<br>
+<p>Another way of representing a vector in the <strong>x-y plane</strong> is just writing the <strong>x and y components</strong> between brackets/parenthesis:</p>
+<img class="illustration" src="https://textimgs.s3.amazonaws.com/boundless-physics/position-vector.svg" alt="[image not found]">
+<h5>Basic operations:</h5>
+<p>Now that we know what vectors are, let's see some very simple and basic calculations:</p>
+<br>
+<p>To find a vector's <strong>magnitude</strong>, we can simply use the <strong>pythagorean theorem</strong> using the <strong>x-y components</strong> of the vector:</p>
+<br>
+<img class="illustration" src="https://qph.cf2.quoracdn.net/main-qimg-ee248f40798a0ffe27119f2b622924d7.webp" alt="[image not found]">
+<br>
+<p>To <strong>add two vectors</strong> together, we just <strong>add the two x coordinates and two y coordinates</strong> together. The resulting vector is the same as if we put the two vectors tail-to-head:</p>
+<br>
+<img class="illustration" src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3d/Vector_Addition.svg/1200px-Vector_Addition.svg.png" alt="[image not found]">
+<br>
+<p>Lastly, <strong>multiplying a vector by a scalar</strong> is just multiplying the two coordinates by the scalar. The result is a vector of same direction/sense, but with a different magnitude:</p>
+<br>
+<img class="illustration" src="https://upload.wikimedia.org/wikipedia/commons/thumb/f/fa/Scalar_multiplication_by_r%3D3.svg/1200px-Scalar_multiplication_by_r%3D3.svg.png" alt="[image not found]">
+<br>
+<div class="center">
+  <br>
+  <h5>A very nice tool to understand and visualize the concept:</h5>
+  <br>
+  <iframe class="center" src="https://phet.colorado.edu/sims/html/vector-addition/latest/vector-addition_en.html"
+          width="100%"
+          height="800"
+          allowfullscreen>
+  </iframe>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

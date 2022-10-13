@@ -1,0 +1,155 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Uniformly Accelerated Rectilinear Motion (UARM)</h1>
+<p style="text-align:center;font-size:0.9em"><i>Moving straight... But faster.</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formulas">Formulas</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'speed_basics'%}">Speed and Velocity: Basics</a>; <a href="{%url 'acceleration_basics'%}">Acceleration: an Introduction</a></p>
+<hr>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<h3>Uniformly Accelerated Rectilinear Motion: what is it?</h3>
+<br>
+<p>In order for a motion to be UARM, it has to satisfy two properties:</p>
+<ul>
+  <li><strong>Acceleration has to be constant/uniform</strong> (velocity increases in a linear way)</li>
+  <li><strong>The trajectory has to remain linear</strong> (in 2D)</li>
+</ul>
+<br>
+<p>Some examples of UARM include: a car accelerating on a straight road, an airplane during take-off, or even just a ball going down a slope!</p>
+<div class="row">
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets2.lottiefiles.com/datafiles/HN7OcWNnoqje6iXIiZdWzKxvLIbfeCGTmvXmEm1h/data.json"  background="transparent"  speed="1"  style="width: 90%; height: 90%;"  loop autoplay></lottie-player>
+  </div>
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_fyffhdtn.json"  background="transparent"  speed="1"  style="width: 90%; height: 90%;"  loop  autoplay></lottie-player>
+  </div>
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets7.lottiefiles.com/packages/lf20_zbkwuhlx.json"  background="transparent"  speed="1"  style="width: 90%; height: 90%;"  loop  autoplay></lottie-player>
+  </div>
+</div>
+<br>
+<h5>The Big 5</h5>
+<br>
+<p>To study UARM, there are five important variables:</p>
+<br>
+<ul>
+  <li><img src="{%static 'v_0.png'%}" style="height:3.8%; width:3.8%" alt="[image not found]">: the initial velocity</li>
+  <li><img src="{%static 'v_f.png'%}" style="height:3.8%; width:3.8%" alt="[image not found]">: the final velocity</li>
+  <li style="margin-bottom:1%"><img src="{%static 'a.png'%}" style="height:2%; width:2%" alt="[image not found]">: acceleration</li>
+  <li style="margin-bottom:1%"><img src="{%static 'x.png'%}" style="height:2%; width:2%" alt="[image not found]">: the diplacement (or <img src="{%static 'delta_x.png'%}" style="height:3%; width:3%" alt="[image not found]"> to be precise)</li>
+  <li><img src="{%static 't.png'%}" style="height:1.5%; width:1.5%" alt="[image not found]">: time (or <img src="{%static 'delta_t.png'%}" style="height:3%; width:3%" alt="[image not found]"> to be precise)</li>
+</ul>
+<a name="formulas"></a>
+<br>
+<br>
+
+<h5>And so, how are they linked together ?</h5>
+<p>Well, these 5 variables work extremely well together. In any exercise, just remember this: <strong>if you know three of the variables, then you can find the other two</strong></p>
+<p>Recall from <a href="{%url 'speed_basics'%}">Speed and Velocity: Basics</a>, that finding the final velocity is that simple:</p>
+<br>
+<img class="illustration" src="{% static 'vat.png' %}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseaccel" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapseaccel">
+  <div class="card card-body">
+    <h6>Let's try to understand this formula:</h6>
+    <p>Its first chunk is given by</p>
+    <img class="smaller_illustration" style="width:20%;height:20%;" src="{%static 'at.png'%}" alt="[image not found]">
+    <p>Recall the units of the following terms:</p>
+    <img class="illustration" src="{%static 'a_and_t.png'%}" alt="[image not found]">
+    <br>
+    <p>Therefore, if we multiply them:</p>
+    <img class="illustration" src="{%static 'mult_a_and_t.png'%}" alt="[image not found]">
+    <p>Which gives us the same units as velocity! Therefore:</p>
+    <p><i>"Acceleration times an amount of time actually represents an increase in velocity"</i></p>
+    <p>Which seems logical, since acceleration means "how much more velocity per second?"</p>
+    <br>
+    <img class="illustration" src="{% static 'vat.png' %}" alt="[image not found]">
+    <p>The formula can thus be translated as such:</p>
+    <p><i>The final velocity is the increase in velocity during time period t, added to the initial velocity.</i></p>
+  </div>
+</div>
+<br>
+<p>Well, another equation that uses displacement also exists:</p>
+<img class="illustration" src="{% static 'displacement_acceleration.png' %}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsedispl" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsedispl">
+  <div class="card card-body">
+    <h6>Let's try to understand this formula:</h6>
+    <p>The last chunk is probably the easiest one to understand: </p>
+    <br>
+    <img class="smaller_illustration" style="width:15%;height:15%;" src="{%static 'v_0t.png'%}" alt="[image not found]">
+    <br>
+    <p>Recall that we are talking about displacement here, and that</p>
+    <br>
+    <img class="illustration" src="{%static 'vdt_dvt.png'%}" alt="[image not found]">
+    <br>
+    <p>By <strong>multiplying the initial velocity with time taken</strong>, we obtain some <strong>displacement</strong> !</p>
+    <p>But remember we said that we were accelerating, which means that another bit of displacement must be added somewhere...</p>
+    <br>
+    <p>That's where the first chunk comes into play:</p>
+    <p>The first chunk comes from calculus and involves derivatives. A simple though not perfect explication can however still be found: </p>
+    <br>
+    <img class="smaller_illustration" style="width:20%;height:20%" src="{%static 'halfat2.png'%}" alt="[image not found]">
+    <br>
+    <p>First, if we analyze the units of</p>
+    <br>
+    <img class="smaller_illustration" style="width:15%;height:15%" src="{%static 'at2.png'%}" alt="[image not found]">
+    <br>
+    <p>We see that</p>
+    <br>
+    <img class="illustration" src="{%static 'at2_units.png'%}" alt="[image not found]">
+    <br>
+    <img class="illustration" src="{%static 'at2_mult.png'%}" alt="[image not found]">
+    <br>
+    <p>which gives us <strong>meters, thus displacement!</strong></p>
+    <br>
+    <p style="font-size: 1.05em">One question remains: where does the <strong>1/2</strong> come from?</p>
+    <br>
+    <p>Well, let's imagine a hypothetical situation where you start at a standstil (0 m/s), and accelerate at 10m/s<sup>2</sup></p>
+    <p>By definition, it means that your velocity after 1 second will be 10 m/s</p>
+    <img class="illustration" src="{%static 'calc_vat.png'%}" alt="[image not found]">
+    <br>
+    <p>In this case, your <strong>average velocity</strong> would sit right in between (since acceleration is constant and velocity increases linearly), at 5m/s</p>
+    <br>
+    <p>If during one second your average velocity is 5 m/s, it means that you travelled 5 meters when acceleration was 10 m/s<sup>2</sup>. And there comes your 1/2!</p>
+    <br>
+    <br>
+    <p style="font-size: 1.2em">It is thus beautiful and logical to see that the <strong>total displacement is the sum of two displacements: one caused by the acceleration, and the other one by the initial velocity !</strong></p>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<div class="row">
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_vngqhvef.json"  background="transparent"  speed="1"  style="width: 80%; height: 80%;"  loop  autoplay></lottie-player>
+  </div>
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets6.lottiefiles.com/packages/lf20_08tbtols.json"  background="transparent"  speed="2"  style="width: 80%; height: 80%;"  loop  autoplay></lottie-player>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+
+{%endblock%}

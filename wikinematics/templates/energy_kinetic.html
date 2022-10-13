@@ -1,0 +1,71 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Kinetic Energy</h1>
+<p style="text-align:center;font-size:0.9em"><i>Okay, here we go. Focus. Speed. I am speed. - Flash Mcqueen</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formula">Formula</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'energy_basics'%}">Energy: Basics</a></p>
+<hr>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<p>(This is a recap from <a href="{%url 'energy_basics'%}">Energy: basics</a>)</p>
+<br>
+<h4>Kinetic energy</h4>
+<p>It seems intuitive that any object <strong>moving</strong> possess some sort of energy right ? Well, kinetic energy is <strong>the energy relative to an object's speed</strong>. Any object in motion is using kinetic energy: a thrown ball, a person running, or even a charged particle in an electric field. </p>
+<br>
+<img src="https://images.ctfassets.net/4yflszkpcwkt/2AkP2ekAxnbwK7tkWZ2aEn/fa346311df3ba491c70eb659d7eab3dd/formula-of-kinetic-energy.png" class="bigger_illustration" alt="">
+<br>
+<h4>Kinetic energy: the formula</h4>
+<br>
+<p>Let's first think intuitively. On what should an object's kinetic energy depend ? The first main obvious answer is <strong>speed</strong>, of course (notice that we talk about <a href="{%url 'speed_basics'%}">speed and not velocity</a> here, because energy is always positive)</p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="smaller_illustration" src="https://assets2.lottiefiles.com/packages/lf20_0EZ3SV.json"  background="transparent"  speed="0.6"  style="width: 40%; height: 40%;"  loop  autoplay></lottie-player>
+<p>But there is something else that kinetic energy depends on. For example, it wouldn't take the same energy for a tennis ball or a car to move at the same speed, right ? In other words, it would require more energy for a car to move than for a tennis ball at same speed. This means that <strong>the object's mass</strong> has to somehow play a role in the object's kinetic energy.</p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="smaller_illustration" src="https://assets9.lottiefiles.com/packages/lf20_1nrrrf1t.json"  background="transparent"  speed="2"  style="width: 40%; height: 40%;"  loop  autoplay></lottie-player>
+<a name="formula"></a>
+<p>Well, the formula for kinetic energy is this one:</p>
+<br>
+<img class="illustration" src="{%static 'ekin.png'%}" alt="[image not found]">
+<p class="small" style="text-align:center">(m = mass, v = speed)</p>
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsespeed" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsespeed">
+  <div class="card card-body">
+    <p>The main takeaways for this formula are that</p>
+    <ul>
+      <li>An object's kinetic energy is <strong>directly proportional</strong> to its mass and the square of its speed</li>
+      <li>For a given object, the only way for its kinetic energy to <strong>increase/decrease</strong> is by <strong>increasing/decreasing its speed</strong></li>
+      <li>There are three variables in the formula: kinetic energy, mass and speed. This means that <strong>when you know two of them you can always find the third one</strong>!</li>
+    </ul>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<h4>A very helpful simulation to understand:</h4>
+<p>(I recommend just testing the intro part or setting friction to "None", since we won't be talking about friction here.)</p>
+<p>(Also, activating the pie chart and bar graph will really help you understand how/when kinetic energy works)</p>
+<br>
+<iframe src="https://phet.colorado.edu/sims/html/energy-skate-park-basics/latest/energy-skate-park-basics_en.html"
+        width="100%"
+        height="800"
+        allowfullscreen>
+</iframe>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

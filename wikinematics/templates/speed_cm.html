@@ -1,0 +1,266 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Uniform Circular Motion (UCM)</h1>
+<p style="text-align:center;font-size:0.9em"><i>Round and round and round and round and round...</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#angles">Angles</a> / <a href="#formulas">Formulas</a> / <a href="#linearly">Linearly</a> / <a href="#p_f">Period and frequency</a> / <a href="#centri_a">Centripetal Accceleration</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'speed_basics'%}">Speed and Velocity: Basics</a>; <a href="{%url 'speed_rm'%}">Uniform Rectilinear Motion</a></p>
+<hr>
+<br>
+<br>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<br>
+<h3>What is circular motion ?</h3>
+<br>
+<p>While <a href="{%url 'speed_rm'%}">rectilinear motion</a> may seem quite intuitive, circular motion can appear as being a bit more complicated... Be safe, it is not.</p>
+<p>I mean, everything is in the name: <strong>circular motion is the movement of an object that rotates along a circular path</strong></p>
+<br>
+<p>The rotation has to follow two rules:</p>
+<ul>
+  <li>Its trajectory has to be <strong>perfectly round</strong> (no ellipses)</li>
+  <li>It has to be fixed <strong>around an axis</strong></li>
+</ul>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets6.lottiefiles.com/packages/lf20_0vufu5n3.json"  background="transparent"  speed="1"  style="width: 80%; height: 80%;"  loop  autoplay></lottie-player>
+<p>Just remember one thing: here, we will only discuss <strong>uniform</strong> circular motion (which means that objects will always be rotating at <strong>constant speed</strong>). If you want to know what happens when objects accelerate, feel free to read about <a href="{%url 'acceleration_cm'%}">UACM</a></p>
+<br>
+<br>
+<a name="angles"></a>
+<h3>And the formulas?</h3>
+<p>Well, before figuring out the formulas, maybe we should define what we are looking for..? Remember, the motion is fixed around an axis, which means that the distance from the starting point never changes right ? It will always be equal to the radius.</p>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets4.lottiefiles.com/packages/lf20_gcec4wds.json"  background="transparent"  speed="1"  style="width: 60%; height: 60%;"  loop  autoplay></lottie-player>
+<br>
+<h5>And that's where the angles come into play.</h5>
+<p class="small">(Recall <a href="{%url 'intro'%}">Intro: angles</a>)</p>
+<p>While we will not measure distance (simply because it doesn't change), we can measure the displacement by measuring the angle between the starting and ending point!</p>
+<img class="smaller_illustration" src="https://www.ixl.com/~media/1/c5Iin8oNDSYGDUfbYnJSbxmtOOMkQK3OqiLsz2LjtC3K4aioSbNady1SmpHpSooH9fMXMvo4GLigUUsOU-i91NuobHUdtkf3eySx_fUbbDVwh8jGonKM2NzDd5jO9BV_4aOEhXG67hnXU5obh2M6vLzHeaZE3_rfJ4p7VxM_PYw.svg" alt="">
+<br>
+<p>This means that:</p>
+<ul>
+  <li>For displacement, instead of meters, we will have <strong>degrees or radians</strong> (often noted <img style="width:1%; height:1%" src="{%static 'theta.png'%}" alt="">)</li>
+  <li>For velocity, instead of meters per second, we will have <strong>degrees or radians per second</strong>. That's what we call <strong>angular velocity</strong> (often noted <img style="width:1.2%; height:1.2%" src="{%static 'w.png'%}" alt="">)</li>
+</ul>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="illustration" src="https://assets4.lottiefiles.com/packages/lf20_ZeG0iN.json"  background="transparent"  speed="1"  style="width: 50%; height: 50%;"  loop  autoplay></lottie-player>
+<br>
+<a name="formulas"></a>
+<h5>Basically:</h5>
+<img src="{%static 'recti_to_circu.png'%}" class="illustration" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapserectcirc" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapserectcirc">
+  <div class="card card-body">
+    <h6>For the units:</h6>
+    <img src="{%static 'recti_to_circu_units.png'%}" class="illustration" alt="[image not found]">
+    <br>
+  </div>
+</div>
+<br>
+<br>
+<h5>And here is the trick: circular motion is actually very similar to rectilinear motion, but with angles instead of meters!</h5>
+<h6>Look:</h6>
+<img class="illustration" src="{%static 'omega_theta_t.png'%}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsecirc" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsecirc">
+  <div class="card card-body">
+    <h6>From this you can easily derive: </h6>
+    <br>
+    <img class="illustration" src="{%static 'theta_omega_t.png'%}" alt="[image not found]">
+    <br>
+    <p>which will be helpful to find the angle drawn after t seconds.</p>
+    <br>
+    <p>And,</p>
+    <img class="illustration" src="{%static 't_theta_omega.png'%}" alt="[image not found]">
+    <br>
+    <p>which will be helpful to find how much time an object has travelled (at constant angular velocity)</p>
+    <br>
+    <p>Doesn't this look very familiar to what we've seen in <a href="{%url 'speed_rm'%}">URM</a>?</p>
+  </div>
+</div>
+<br>
+<br>
+<h4>URM vs UCM:</h4>
+<p>Everything can be summarized into one table: </p>
+<img src="{%static 'urm_vs_ucm.png'%}" class="bigger_illustration" alt="[image not found]">
+<br>
+<br>
+<a name="linearly"></a>
+<h4>Another perspective:</h4>
+<p>Something interesting about circular movement is that these angles and angles per second can all be translated into meters and meters per second!</p>
+<p>Because yes, the distance between the object and the center of the movement never changes, but the object itself <strong>still travels some distance</strong>, right ?</p>
+<br>
+<h6>But so how do they relate ?</h6>
+<p>Well, we first have to consider that two objects <strong>drawing the same angle</strong> may <strong>not travel the same distance</strong>, right ?</p>
+<p>I mean, drawing an angle of 70 degrees on a football or on the sun doesn't cover the same distance!</p>
+<img class="bigger_illustration" src="https://dr282zn36sxxg.cloudfront.net/datastreams/f-d%3A848cea160998c03c26a1bfc27aa386ae97d0053a201c8538e19b623f%2BIMAGE_THUMB_POSTCARD_TINY%2BIMAGE_THUMB_POSTCARD_TINY.1" alt="">
+<p class="small" style="text-align:center">(Here, we can clearly see that the red section is smaller than the blue one, even thought the angle is the same)</p>
+<br>
+<p>Actually, the angle doesn't tell us everything about the distance travelled... So what is missing ?</p>
+<p>Well, a major difference between a football and the sun is obviously the <strong>radius</strong> !</p>
+<p>Intuitively, it seems logical that for a given angle (on a circle), the bigger the radius, the bigger the distance travelled, right ?</p>
+<br>
+<p>And that's simply because:</p>
+<img class="illustration" src="{%static 'd_theta_r.png'%}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsed" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsed">
+  <div class="card card-body">
+    <p>Be careful, though, because this formula only works with <strong>angles in radians</strong>!</p>
+    <br>
+    <p>This formula can be translated into:</p>
+    <p style="font-size:1.2em"><i>The distance travelled by an object travelling circularly is the angle drawn on the circle times the radius of that circle.</i></p>
+    <p>which should sound pretty intuitive</p>
+    <br>
+    <p>This explains the presence of &#960;s in radians and shows that the relation between an angle and its arclength is linear, depending only on the radius!</p>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<img class="illustration" src="{%static 'v_omega_r.png'%}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsev" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsev">
+  <div class="card card-body">
+    <p>If we understand the previous formula, this one should feel intuitive. </p>
+    <p>It shows that just like translating "angle drawn" to "distance travelled", translating "angular speed" to "linear speed" is that simple: just <strong>multiply by the radius!</strong></p>
+  </div>
+</div>
+<br>
+<br>
+<a name="p_f"></a>
+<h4>Period and frequency:</h4>
+<p>There is one more thing that we should talk about when describing circular motion</p>
+<p>In fact, two variables are often useful:</p>
+<ul>
+  <li>The period (often noted <img style="height:1.1%;width:1.1%"src="{%static 't_period.png'%}" alt="[image not found]">) describes the <strong>time in seconds required for the object to make a full circle</strong> (=travel 360 degrees or 2&#960;rad)</li>
+  <li>The frequency (often noted <img style="height:1.1%;width:1.1%"src="{%static 'f_frequency.png'%}" alt="[image not found]">) describes the <strong>portion of the circle travelled in 1 second</strong>. Its unit is 1/s (more explanation <a href="#f">above</a>)</li>
+</ul>
+<br>
+<p>They are useful because they often relate to angular velocity <img style="width:1.2%; height:1.2%" src="{%static 'w.png'%}" alt="">. <br>Indeed, if we know "<i>how fast the object is turning</i>", we can know "<i>in how much time it draws a full circle</i>", or "<i>how much he travelled in 1 second</i>", right?</p>
+<p>Well:</p>
+<img class="illustration" src="{%static 't_2pi_w.png'%}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapset" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapset">
+  <div class="card card-body">
+    <h4>Explanation</h4>
+    <h6>Recall that:</h6>
+    <img class="illustration" src="{%static 't_theta_omega.png'%}" alt="[image not found]">
+    <p>Therefore, since the period <img style="height:1.1%;width:1.1%"src="{%static 't_period.png'%}" alt="[image not found]"> is "<i>the time required to make a full turn</i>" and a "<i>full turn</i>" is 2&#960;rad, we just replace <img style="width:1%; height:1%" src="{%static 'theta.png'%}" alt=""> by 2&#960;!</p>
+    <img class="illustration" src="{%static 't_2pi_w.png'%}" alt="[image not found]">
+    <br>
+    <br>
+    <br>
+    <h6>This means that:</h6>
+    <img class="illustration" src="{%static 'w_2pi_t.png'%}" alt="[image not found]">
+    <br>
+    <p>which gives us another way of finding the angular velocity, if we know the period!</p>
+  </div>
+</div>
+<br>
+<br>
+<img class="illustration" src="{%static 'f_w_2pi.png'%}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsef" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsef">
+  <div class="card card-body">
+    <h4>Explanation</h4>
+    <h6>Recall that the frequency is "<i>the <strong>portion</strong> of the circle travelled in 1 second</i>"</h6>
+    <p>But what does this exactly mean ?</p>
+    <p>Well, the <strong>portion</strong> could be translated into the <i>percentage</i> of the circle travelled by the object: if it is 1/2, then the object travelled half a circle, or if it is 1/3, the object travelled a third of a circle, etc...</p>
+    <br>
+    <p>Now, we know that the angular velocity actually describes the <strong>angle in radians</strong> travelled by the object in 1 second, and we also know that <strong>the full circle is 2&#960;rad</strong>. Therefore, if we want to find the <strong>portion</strong> travelled by the object in one second, we have to divided the "<i>part by the whole</i>", which is thus</p>
+    <img src="{%static 'expl_f.png'%}" class="illustration" alt="[image not found]">
+  </div>
+</div>
+<a name="f"></a>
+<br>
+<br>
+<p>Also note that:</p>
+<br>
+<img class="bigger_illustration" src="{%static 't_and_f.png'%}" alt="[image not found]">
+<br>
+<br>
+<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+<lottie-player class="smaller_illustration" src="https://assets8.lottiefiles.com/packages/lf20_9aywa39u.json"  background="transparent"  speed="1.5"  style="width: 50%; height: 50%;"  loop  autoplay></lottie-player>
+<br>
+<br>
+<br>
+<a name="centri_a"></a>
+<h3>Centripetal Acceleration</h3>
+<p>Lastly, let me introduce a little theoretical notion here:</p>
+<br>
+<p>For an object to be in a circular movement, by nature, even if the object's rotating velocity is constant, <strong>it has to be accelerating towards the center</strong> of its trajectory (centripetal). This is because if it didn't, the object would simply drift out of the trajectory and "nothing would retain it from escaping the circle".</p>
+<br>
+<img class="illustration" src="https://study.com/cimages/multimages/16/fig_26602216253535086357.jpg" alt="">
+<p style="text-align:center" class="small">Imagine if you removed a centripetal acceleration vector here, the object would drift out of the circle, right?</p>
+<br>
+<p>The value of this centripetal acceleration is given by:</p>
+<br>
+<img class="illustration" src="{%static 'a_c_v2_r.png'%}" alt="[image not found]">
+<p style="text-align:center">where v is <strong>linear velocity</strong> and R is the circular trajectory's radius</p>
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapseca" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapseca">
+  <div class="card card-body">
+    <p>The explanation for this formula involves derivatives and slightly more complex stuff</p>
+    <p>If you are interested, check out <a href="https://courses.lumenlearning.com/suny-physics/chapter/6-2-centripetal-acceleration/">this page</a></p>
+    <br>
+    <h5>An interesting derivation:</h5>
+    <p>However, we can still derivate this expression to find another one that's interesting:</p>
+    <br>
+    <p>Recall from <a href="#linearly">above</a> how:</p>
+    <img class="illustration" src="{%static 'v_omega_r.png'%}" alt="[image not found]">
+    <br>
+    <p>Well, this implies that:</p>
+    <img class="illustration" src="{%static 'v2_w2_r2.png'%}" alt="[image not found]">
+    <p>Which, in turn, means that</p>
+    <img class="illustration" src="{%static 'v2_r_w2_r.png'%}" alt="">
+    <br>
+    <p>Which finally gives us:</p>
+    <img class="illustration" src="{%static 'a_c_omega2_r.png'%}" alt="">
+    <br>
+    <br>
+    <p>And now we can find centripetal acceleration using both linear and angular velocities!</p>
+  </div>
+</div>
+<br>
+<h5>And this is the condition for an object to be in a circular movement.</h5>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

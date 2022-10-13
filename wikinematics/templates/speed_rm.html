@@ -1,0 +1,105 @@
+{% extends "home.html"%}
+{%load static%}
+{%block body_block%}
+<br>
+<h1 style="text-align:center;">Uniform Rectilinear motion (URM)</h1>
+<p style="text-align:center;font-size:0.9em"><i>Moving straight. Just moving straight.</i></p>
+<p style="text-align:center;font-size:0.8em"><a href="#def">Definitions</a> / <a href="#formulas">Formulas</a></p>
+<br>
+<p style="text-align:center;font-size:0.9em">Prerequisites: <a href="{%url 'speed_basics'%}">Speed and Velocity: Basics</a></p>
+<hr>
+<br>
+<br>
+<br>
+<a name="def"></a>
+<h3>What is Rectilinear motion ?</h3>
+<br>
+<p>Well, it is that simple: <strong>Rectilinear motion is movement in 1D</strong>. Basically, it means that movements (e.g: left or right) can be described by a simple straight line.</p>
+<div class="row">
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player  src="https://assets8.lottiefiles.com/packages/lf20_fdt2cscj.json" mode="bounce" background="transparent"  speed="0.4"  style="width: 60%; height: 60%;"  loop  autoplay></lottie-player>
+  </div>
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets2.lottiefiles.com/packages/lf20_eP48EC.json"  background="transparent"  speed="1"  style="width: 80%; height: 80%;"  loop  autoplay></lottie-player>
+  </div>
+</div>
+<br>
+<p>In this section, we will discuss <strong>uniform</strong> rectilinear motion <strong>(without acceleration</strong>, the simplest case). If you want to know what happens when objects accelerate, feel free to read about <a href="{%url 'acceleration_rm'%}">UARM</a></p>
+<br>
+<br>
+<h5>Little comment about frames of reference: </h5>
+<p class="small">For more details, please go to <a href="{%url 'intro'%}">Kinematics: an Introduction</a></p>
+<br>
+<p>The first thing we want to do when describing a rectilinear motion is <strong>define the positive/negative direction</strong>.</p>
+<p>Why ? Well, let's consider the following case:</p>
+<p>If two cars are moving in the <strong>same direction</strong>, at same speed, it seems intuitive that the distance between them will never increase, right ?</p>
+<div class="row">
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_skwgamub.json"  background="transparent"  speed="1"  style="width: 110%; height: 90%;"  loop  autoplay></lottie-player>
+  </div>
+  <div class="col">
+    <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+    <lottie-player src="https://assets2.lottiefiles.com/private_files/lf30_skwgamub.json"  background="transparent"  speed="1"  style="width: 110%; height: 90%;"  loop  autoplay></lottie-player>
+  </div>
+</div>
+<p>Now what if they move in <strong>opposite direction</strong> ? The distance between the two cars will continuously increase as the two cars are moving away!</p>
+<br>
+<h6>This means that in <strong>directions matter when talking about motion!</strong></h6>
+<p>And to deal with the matter, we just arbitrarly define one direction as the <strong>positive</strong> direction, and the other one as the <strong>negative</strong> direction.</p>
+<img src="{%static 'directions.png'%}" class="illustration" alt="[image not found]">
+<br>
+<br>
+<h5>In URM, there are 3 important variables:</h5>
+<br>
+<ul>
+  <li style="margin-bottom:1%"><img src="{%static 'x.png'%}" style="height:2%; width:2%" alt="[image not found]">: the diplacement (or <img src="{%static 'delta_x.png'%}" style="height:3%; width:3%" alt="[image not found]"> to be precise)</li>
+  <li style="margin-bottom:1%"><img src="{%static 'v.png'%}" style="height:2.5%; width:2.5%" alt="[image not found]">: the velocity </li>
+  <li><img src="{%static 't.png'%}" style="height:1.5%; width:1.5%" alt="[image not found]">: time (or <img src="{%static 'delta_t.png'%}" style="height:3%; width:3%" alt="[image not found]"> to be precise)</li>
+</ul>
+<p>The rule for URM is that: <strong>If you know two of the variables, then you can find the last one</strong></p>
+<br>
+<a name="formulas"></a>
+<h3>The formulas:</h3>
+<p>When there is no acceleration, everything is pretty straightforward: </p>
+<p>The basic formula to find velocity is, by definition, displacement over time</p>
+<img class="illustration" src="{%static 'v_xt.png'%}" alt="[image not found]">
+<p>
+  <button class="btn btn-primary" type="button" data-toggle="collapse" data-target="#collapsenoaccel" aria-expanded="false" aria-controls="collapseExample">
+    More
+  </button>
+</p>
+<div class="collapse" id="collapsenoaccel">
+  <div class="card card-body">
+    <h6>From this you can easily derive: </h6>
+    <br>
+    <img class="illustration" src="{%static 'x_vt.png'%}" alt="[image not found]">
+    <br>
+    <p>which will be helpful to find the displacement and position of an object after t seconds.</p>
+    <br>
+    <p>And,</p>
+    <img class="illustration" src="{%static 't_xv.png'%}" alt="[image not found]">
+    <br>
+    <p>which will be helpful to find how much time an object has travelled (at constant velocity)</p>
+    <br>
+    <p>All in all, this means that velocity, time and displacement all depend on each other!</p>
+  </div>
+</div>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<img class="bigger_illustration" style="width:100%;height:100%" src="https://cdn1.byjus.com/physics/2017/10/07044502/Distance-Time-Graph-uniform-velocity1.png" alt="[image not found]">
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+<br>
+{%endblock%}

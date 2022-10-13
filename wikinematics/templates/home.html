@@ -1,0 +1,321 @@
+{%load static%}
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css" integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+    <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js" integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF" crossorigin="anonymous"></script>
+    <script src="https://kit.fontawesome.com/01de0c4f4d.js" crossorigin="anonymous"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/fullPage.js/4.0.9/fullpage.min.js" integrity="sha512-JSVRnP8UFs0ieN/cvP9v4vmW1CotIaEKKN7W+4JaKNrllZolTv2aJfVGn4BFdfZ1jRZxgTAAaXWdlZbEm9iwFA==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <style type="text/css">
+                .highlight
+                {
+                    background-color: yellow;
+                    font-weight:bold;
+                }
+                #test-text::-moz-selection { /* Code for Firefox */
+
+                    background-color: yellow;
+                    font-weight:bold;
+                }
+
+                #test-text::selection {
+
+                    background-color: yellow;
+                    font-weight:bold;
+                }
+
+            </style>
+    <link rel="stylesheet" href="{%static 'style.css'%}">
+  </head>
+  <body>
+    <nav class="navbar navbar-expand-lg navbar-dark" style="background-color:#9f6fe3">
+      <a class="navbar-brand" href="{%url 'home'%}">Wikinematics</a>
+  <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+    <span class="navbar-toggler-icon"></span>
+  </button>
+
+  <div class="collapse navbar-collapse" id="navbarSupportedContent">
+    <ul class="navbar-nav mr-auto">
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Introduction to Kinematics
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{%url 'intro'%}">Kinematics: an Introduction <span class="badge badge-success">&#9734;</span> </a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Speed
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{%url 'speed_basics'%}">Speed: Basics <span class="badge badge-success">&#9734;</span></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{%url 'speed_rm'%}">Speed: Rectilinear Motion <span class="badge badge-success">&#9734;</span></a>
+          <a class="dropdown-item" href="{%url 'speed_cm'%}">Speed: Circular Motion <span class="badge badge-warning">&#9734;&#9734;</span></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Acceleration
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{%url 'acceleration_basics'%}">Acceleration: Basics <span class="badge badge-success">&#9734;</span></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{%url 'acceleration_rm'%}">Acceleration: Rectilinear Motion <span class="badge badge-warning">&#9734;&#9734;</span></a>
+          <a class="dropdown-item" href="{%url 'acceleration_cm'%}">Acceleration: Circular Motion <span class="badge badge-danger">&#9734;&#9734;&#9734;</span></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          Energy
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{%url 'energy_basics'%}">Energy: Basics <span class="badge badge-success">&#9734;</span></a>
+          <div class="dropdown-divider"></div>
+          <a class="dropdown-item" href="{%url 'energy_kinetic'%}">Kinetic Energy <span class="badge badge-warning">&#9734;&#9734;</span></a>
+          <a class="dropdown-item" href="{%url 'energy_potential'%}">Potential Energy <span class="badge badge-warning">&#9734;&#9734;</span></a>
+          <a class="dropdown-item" href="{%url 'energy_mechanical'%}">Mechanical Energy <span class="badge badge-warning">&#9734;&#9734;</span></a>
+        </div>
+      </li>
+      <li class="nav-item dropdown active">
+        <a class="nav-link dropdown-toggle" href="#" role="button" data-toggle="dropdown" aria-expanded="false">
+          2D Kinematics
+        </a>
+        <div class="dropdown-menu">
+          <a class="dropdown-item" href="{%url 'projectile'%}">Projectiles <span class="badge badge-danger">&#9734;&#9734;&#9734;</span></a>
+        </div>
+      </li>
+    </ul>
+  </div>
+</nav>
+    <br>
+    <div class="container" id="test-text">
+{%block body_block%}
+      <br>
+      <br>
+      <br>
+      <h1 style="text-align:center; font-size:5em;">Welcome to Wikinematics !</h1>
+      <h6 style="text-align:center;">What a pun to begin with, right ?</h6>
+      <br>
+      <p style="font-size:1.2em;text-align:center"><i>In one sentence, we tried to make it simple and understandable for everyone.</i></p>
+      <br>
+      <br>
+      <br>
+      <br>
+      <br>
+      <div class="row">
+        <div class="col-9">
+          <div class="illustration jumbotron card-hover" style="background-color: #f4f6f8;text-align:center;">
+            <h3>What is Wikinematics ?</h3>
+            <br>
+            <p>Wikinematics is a website designed to simplify kinematics. We are here to make this branch of physics, often percieved as hard and complex, more accessible and easier to understand to anyone. This website is not designed for Albert Einsteins and Isaac Newtons, rather the opposite. Any student in high school with simple basics in maths should be able to understand the concepts explained here and improve his understanding of the world he lives in. No pretention, no complex calculus. Only simple formulas and simple words undestandable for everyone!</p>
+            <br>
+            <br>
+          </div>
+        </div>
+        <div class="col-3">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player class="illustration" src="https://assets10.lottiefiles.com/packages/lf20_0b5voxx7.json"  background="transparent"  speed="1.2"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+        </div>
+      </div>
+      <div class="row">
+        <div class="col-3">
+          <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+          <lottie-player class="illustration" src="https://assets4.lottiefiles.com/packages/lf20_ihbj5fv7.json"  background="transparent"  speed="1.2"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+        </div>
+        <div class="col-9">
+          <div class="illustration jumbotron card-hover" style="background-color:#f4f6f8;text-align:center">
+            <h3>Difficulty level <span class="badge badge-success">&#9734;</span> <span class="badge badge-warning">&#9734;&#9734;</span> <span class="badge badge-danger">&#9734;&#9734;&#9734;</span></h3>
+            <br>
+            <p>As you can see in the navigation bar above, we indicated each page's difficulty and complexity with a star-ranking system. This doesn't mean that 3-star pages are impossible or that you should only read 1-star pages, of course, but they are here to give you an idea of what to expect when reading them. The importance of prerequesites (always indicated on the top of the page) for more 2/3 star pages is not to be overlooked!</p>
+            <br>
+            <br>
+          </div>
+      </div>
+      </div>
+        <div class="row" style="height:100%">
+          <div class="col-9">
+            <div class="jumbotron illustration card-hover" style="background-color: #e8fff6; text-align:center">
+            <h4>"Discover more" buttons:</h4>
+            <br>
+            <ul>
+              <li><p>We didn't want to make this website messy. When navigating on Wikinematics, you might see that most formulas are followed by a <button type="button" class="btn btn-sm btn-primary" name="button">More</button> or <button type="button" class="btn btn-sm btn-primary" name="button">Here's why</button>. These buttons are here to either explain or develop the "simple" formula shown above.
+              We strongly recommend you clicking at least once every button, even if you just want to learn the formulas by heart, because they will develop your global intuition in physics, which can be very helpful even for learning by heart.</p> </li>
+            </ul>
+            <br>
+            <br>
+            </div>
+          </div>
+          <div class="col-3">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player class="illustration" src="https://assets3.lottiefiles.com/packages/lf20_gte7csv7.json"  background="transparent"  speed="1.2"  style="width: 80%; height: 80%;"  loop  autoplay></lottie-player>
+          </div>
+        </div>
+
+        <div class="row" style="height:100%">
+          <div class="col-3">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player class="illustration" src="https://assets7.lottiefiles.com/packages/lf20_snrnrV.json"  background="transparent"  speed="0.5"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+          </div>
+          <div class="col-9">
+            <div class="jumbotron illustration card-hover" style="background-color: #e8fff6; text-align:center">
+            <h4>Text-highlighting:</h4>
+            <br>
+            <ul>
+              <li><p>To do so, if you're on a computer, just select the text you want to highlight and it should magically become <span class="highlight ">highlighted</span>! If you want to unhighlight something, just select the exact portion you've highlighted and it should turn back to normal. </p></li>
+              <br>
+              <li><p>However, this makes copy/pasting a bit different on Wikinematics: to copy some text, you will have to maintain the text selected (hold left-click on your mouse) while clicking <span class="badge badge-secondary">Ctrl+C</span> (or <span class="badge badge-secondary">Cmd+C</span> if you're on MacOS)</p></li>
+              <br>
+              <li><p>Be careful: refreshing a page will reset every highlighted text !</p></li>
+            </ul>
+            <br>
+            <br>
+            </div>
+          </div>
+        </div>
+
+        <div class="row" style="height:100%">
+
+          <div class="col-9">
+            <div class="jumbotron illustration card-hover" style="background-color: #e8fff6; text-align:center">
+            <h4>Built-in simulations:</h4>
+            <br>
+            <ul>
+              <li>Thanks to <a href="https://phet.colorado.edu/">the University of Colorado Boulder</a>, we provide some simulations to help visualise some topics in kinematics. Visualisation also allows one to develop some sort of scientific intuition about "what's gonna happen" or "how it will turn out", so make sure to spend some time playing with these simulations. Remember, <i>visualisation can always answer what the text can't explain.</i></li>
+            </ul>
+            <br>
+            </div>
+          </div>
+          <div class="col-3">
+            <script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+            <lottie-player class="illustration" src="https://assets8.lottiefiles.com/packages/lf20_0fklb4fn.json"  background="transparent"  speed="1.2"  style="width: 100%; height: 100%;"  loop  autoplay></lottie-player>
+          </div>
+        </div>
+      <br>
+      <br>
+      <a class="easter_egg" href="https://www.twitch.tv/niv_sairontv"><p style="color:grey;font-size:0.5em;">.</p></a>
+{%endblock%}
+    </div>
+  </body>
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+            <script type="text/javascript">
+                mouseXPosition = 0;
+                $(document).ready(function () {
+
+                    $("#test-text").mousedown(function (e1) {
+                        mouseXPosition = e1.pageX;//register the mouse down position
+                    });
+
+                    $("#test-text").mouseup(function (e2) {
+                        var highlighted = false;
+                        var selection = window.getSelection();
+                        var selectedText = selection.toString();
+                        var startPoint = window.getSelection().getRangeAt(0).startOffset;
+                        var endPoint = window.getSelection().getRangeAt(0).endOffset;
+                        var anchorTag = selection.anchorNode.parentNode;
+                        var focusTag = selection.focusNode.parentNode;
+                        if ((e2.pageX - mouseXPosition) < 0) {
+                            focusTag = selection.anchorNode.parentNode;
+                            anchorTag = selection.focusNode.parentNode;
+                        }
+                        if (selectedText.length === (endPoint - startPoint)) {
+                            highlighted = true;
+
+                            if (anchorTag.className !== "highlight") {
+                                highlightSelection();
+                            } else {
+                                var afterText = selectedText + "<span class = 'highlight'>" + anchorTag.innerHTML.substr(endPoint) + "</span>";
+                                anchorTag.innerHTML = anchorTag.innerHTML.substr(0, startPoint);
+                                anchorTag.insertAdjacentHTML('afterend', afterText);
+                            }
+
+                        }else{
+                            if(anchorTag.className !== "highlight" && focusTag.className !== "highlight"){
+                                highlightSelection();
+                                highlighted = true;
+                            }
+
+                        }
+
+
+                        if (anchorTag.className === "highlight" && focusTag.className === 'highlight' && !highlighted) {
+                            highlighted = true;
+
+                            var afterHtml = anchorTag.innerHTML.substr(startPoint);
+                            var outerHtml = selectedText.substr(afterHtml.length, selectedText.length - endPoint - afterHtml.length);
+                            var anchorInnerhtml = anchorTag.innerHTML.substr(0, startPoint);
+                            var focusInnerHtml = focusTag.innerHTML.substr(endPoint);
+                            var focusBeforeHtml = focusTag.innerHTML.substr(0, endPoint);
+                            selection.deleteFromDocument();
+                            anchorTag.innerHTML = anchorInnerhtml;
+                            focusTag.innerHTml = focusInnerHtml;
+                            var anchorafterHtml = afterHtml + outerHtml + focusBeforeHtml;
+                            anchorTag.insertAdjacentHTML('afterend', anchorafterHtml);
+
+
+                        }
+
+                        if (anchorTag.className === "highlight" && !highlighted) {
+                            highlighted = true;
+                            var Innerhtml = anchorTag.innerHTML.substr(0, startPoint);
+                            var afterHtml = anchorTag.innerHTML.substr(startPoint);
+                            var outerHtml = selectedText.substr(afterHtml.length, selectedText.length);
+                            selection.deleteFromDocument();
+                            anchorTag.innerHTML = Innerhtml;
+                            anchorTag.insertAdjacentHTML('afterend', afterHtml + outerHtml);
+                         }
+
+                        if (focusTag.className === 'highlight' && !highlighted) {
+                            highlighted = true;
+                            var beforeHtml = focusTag.innerHTML.substr(0, endPoint);
+                            var outerHtml = selectedText.substr(0, selectedText.length - beforeHtml.length);
+                            selection.deleteFromDocument();
+                            focusTag.innerHTml = focusTag.innerHTML.substr(endPoint);
+                            outerHtml += beforeHtml;
+                            focusTag.insertAdjacentHTML('beforebegin', outerHtml );
+
+
+                        }
+                        if (!highlighted) {
+                            highlightSelection();
+                        }
+                        $('.highlight').each(function(){
+                            if($(this).html() == ''){
+                                $(this).remove();
+                            }
+                        });
+                        selection.removeAllRanges();
+                    });
+                });
+
+                function highlightSelection() {
+                    var selection;
+
+                    //Get the selected stuff
+                    if (window.getSelection)
+                        selection = window.getSelection();
+                    else if (typeof document.selection != "undefined")
+                        selection = document.selection;
+
+                    //Get a the selected content, in a range object
+                    var range = selection.getRangeAt(0);
+
+                    //If the range spans some text, and inside a tag, set its css class.
+                    if (range && !selection.isCollapsed) {
+                        if (selection.anchorNode.parentNode == selection.focusNode.parentNode) {
+                            var span = document.createElement('span');
+                            span.className = 'highlight';
+                            span.textContent = selection.toString();
+                            selection.deleteFromDocument();
+                            range.insertNode(span);
+    //                        range.surroundContents(span);
+                        }
+                    }
+                }
+
+            </script>
+</html>
